@@ -17,5 +17,5 @@ with the provided *Dockerfile*.
 
 >Note: This project is still in it's lowest **Alpha stage**, so it will receive a lot of new features, and bugfixes.
 
-[^1]: Unfurtunately, I haven't figured out how to automatize this yet.
+[^1]: Unfortunately, I haven't figured out how to automatize this yet.
 
