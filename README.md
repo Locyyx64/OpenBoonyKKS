@@ -6,6 +6,7 @@ The main goal of this project, is to aid retailers, looking for a place to sell 
 to any newcomers, intending to monetize either digital or physical assets.
 
 The Web Application essentially uses XAMPP as the webserver.[^1]
+
 It was mainly written in ***PHP***, ***JavaScript***, ***CSS*** and ***Sass***, ***MySQL** (with phpmyadmin)*,
 and I'm also intending to develop some ***Bash** (Bourne Again Shell)* utilities, and the ability to run it as a *Docker container*,
 with the provided *Dockerfile*.
