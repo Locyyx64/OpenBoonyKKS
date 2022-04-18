@@ -1,0 +1,11 @@
+:root{
+        --orange: rgba(224, 84 , 8, 0.6);
+        --red: rgba(196, 21, 24, 0.8);
+        --shadow: rgb(66, 76, 68);
+        --navText: #e8dad7;
+        --dropdownText: #936a6b;
+        --pageText: #d30e0e;
+        --brightRed: #ed0003;
+        --columnText: #e2180d;
+	--evenChild: #e8e5e5;
+}

@@ -1,0 +1,23 @@
+@import url("mutual.css");
+
+#settings-label{
+	position: absolute;
+	top: 15%;
+	left: 10%;
+	border: 3px solid black;
+	padding: 10px;
+}
+#settings-form{
+	position: absolute;
+	top: 30%;
+	left: 15%;
+}
+#settings-form input{
+	margin: 50px 0 50px 0;
+}
+textarea{
+	vertical-align: middle;
+}
+label{
+	color: rgb(239, 4, 4);
+}

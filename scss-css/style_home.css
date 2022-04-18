@@ -1,0 +1,134 @@
+@import url("mutual.css");
+@charset "UTF-8";
+
+:root{
+	--lightRed: rgba(196, 21, 24, 0.7);
+	--shadow: rgba(94, 60, 60, 0.8);
+}
+
+#timeDiv{
+	position: absolute;
+	top: 15%;
+	right: 0%;
+	opacity: 0;
+	width: 40vh;
+	height: 40vh;
+	box-shadow: 10px 10px 15px var(--shadow);
+	border-radius: 15px;
+	background: linear-gradient(to right bottom, var(--orange), var(--red));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	z-index: -2;
+}
+.time{
+	font-size: 30px;
+	font-style: oblique;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+/* Styling the Crypto Tracker */
+#cryptos{
+	background: linear-gradient(to right bottom, var(--orange), var(--red));
+	width: 60vh;
+	height: 30vh;
+	position: absolute;
+	top: 60%;
+	right: 5%;
+	border-radius: 15px;
+	box-shadow: 10px 10px 15px var(--shadow);
+	
+}
+#cryptos input{
+	position: relative;
+	top: 10%;
+	left: 17%;
+	transform: scale(150%);
+	width: 12vw;
+	border-radius: 10px;
+	font-style: italic;
+}
+#cryptos input:focus{
+	outline: 5px double var(--red);
+}
+#cryptos ul{
+	position: relative;
+	top: 15%;
+	left: 7%;
+	width: 23vw;
+	height: 20vh;
+	overflow: auto;
+	list-style-type: none;
+}
+#cryptos ul li{
+	width: inherit;
+}
+#cryptos ul li a{
+	text-decoration: none;
+}
+.crypto{
+	font-style: oblique;
+	font-size: 20px;
+}
+.exit-img{
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	padding: 0 10px 0 10px;
+}
+
+/* The player with the most points */
+#best_achiever{
+	position: absolute;
+	top: 12%;
+	left: 3%;
+	width: 50vh;
+	height: 30vh;
+	border-radius: 15px;
+	background: linear-gradient(to right bottom, var(--orange), var(--red));
+	box-shadow: 10px 10px 15px var(--shadow);
+}
+#inner_achiever{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#name_points{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#highest_ppic{
+	width: 30vh;
+	height: 20vh;
+	border-radius: 8px;
+}
+#uname{
+	font-family: 'PointWarrior', sans-serif;
+}
+#highest_title{
+	margin-left: 10px;
+	text-decoration: underline;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 400px){
+	#timeDiv{
+		transform: scale(60%);
+	}
+	#cryptos{
+		transform: scale(60%);
+		right: -15%;
+	}
+}
+
+@font-face{
+	font-family: PointWarrior;
+	src: url("../fonts/fonts/victorregular.ttf");
+	font-size: 1.5rem;
+}

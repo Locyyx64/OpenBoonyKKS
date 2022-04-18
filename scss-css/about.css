@@ -1,0 +1,23 @@
+@import url("mutual.css");
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  border-radius: 20px;
+  background: linear-gradient(to left bottom, rgba(249, 105, 69, 0.6), rgba(249, 105, 69, 0));
+}
+
+#intro {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+#descriptionText {
+  font-size: 1.2em;
+}
+
+/*# sourceMappingURL=about.css.map */

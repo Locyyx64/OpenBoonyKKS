@@ -1,0 +1,145 @@
+@import url("mutual.css");
+
+:root {
+	--adminText: #473b3b;
+	--selectedAdmin1: rgba(201, 141, 141, 0.4);
+	--selectedAdmin2: rgba(204, 50, 50, 0.7);
+	--columnText: rgb(226, 24, 13);
+	--pageText: #d30e0e;
+}
+
+#navbar-admin {
+	position: absolute;
+	top: 10%;
+	left: 0%;
+	height: 100%;
+	width: 30vh;
+	background-color: var(--orange)
+}
+#navbar-admin ul{
+	list-style-type: none;	
+}
+#navbar-admin ul li{
+	padding: 30px;
+	box-sizing: border-box;
+}
+#navbar-admin ul li:hover{
+	background: linear-gradient(to right bottom, var(--selectedAdmin1), var(--selectedAdmin2)); 
+}
+
+#navbar-admin ul li a{
+	text-decoration: none;
+	color: var(--adminText);
+	font-size: 17px;
+}
+
+/* Styling the "Manage Products" Page*/
+
+#products-table{
+	position: absolute;
+	top: 15%;
+	left: 55%;
+	transform: translateX(-50%);
+	width: 60%;
+	height: 60%;
+}
+thead tr th, tbody tr td{
+	width: 10vh;
+	box-sizing: border-box;
+	margin: 25px 50px 10px 50px;
+	text-align: center;
+}
+thead{
+	height: 18%;
+}
+tbody tr td{
+	margin: 10px 50px 0 50px !important;
+}
+tr {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+thead tr th a{
+	text-decoration: none;
+	color: var(--columnText); 
+}
+thead tr th a:hover{
+	text-decoration: underline;
+}
+.product-images{
+	width: 120px;
+	height: 80px;
+}
+
+/* Styling the "Add Product" Page */
+
+h1{
+	position: absolute;
+	top: 12%;
+	left: 25%;
+	font-style: oblique;
+	border: 2px solid black;
+	padding: 5px;
+}
+#productCreation{
+	position: absolute;
+	top: 23%;
+	left: 55%;
+	transform: translateX(-50%);
+	width: 100vh;
+	font-size: 1.3rem;
+}
+#productCreation input, textarea{
+	margin: 35px 10px 35px 10px;
+	font-size: 1.1rem;
+}
+#productCreation input:focus, textarea:focus{
+	outline: 3px double var(--columnText);
+}
+textarea{
+	resize: none;
+	overflow: auto;
+	vertical-align: middle;
+}
+input[type="submit"]{
+	transform: scale(120%, 120%);
+}
+
+/* Styling the Admin Products Pagination */
+#page-nav{
+	position: absolute;
+	top: 120%;
+	left: 57%;
+	transform: translateX(-50%);
+}
+#page-nav ul{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	list-style-type: none;
+}
+#page-nav ul li{
+	margin: 0 30px 0 30px;
+}
+#page-nav ul li a{
+	text-decoration: none; 
+	color: var(--pageText);
+}
+#page-selected{
+	display: inline-block;
+	transform: scale(170%, 170%);
+	box-sizing: border-box;
+}
+
+/* User Management */
+
+#users-table{
+	position: absolute;
+	top: 15%;
+	left: 55%;
+	transform: translateX(-50%);
+}
+#users-table thead tr th, #users-table tbody tr td{
+	padding: 0px 30px 15px 30px;
+}

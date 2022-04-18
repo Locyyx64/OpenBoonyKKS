@@ -1,0 +1,120 @@
+@import url("variables.css");
+
+* {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+}
+body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+}
+
+/* Navigation Bar */
+#navBar{
+        width: 100%;
+        height: 10%;
+        position: absolute;
+        top: 0%;
+        background: linear-gradient(to right bottom, var(--red), var(--orange));
+}
+#navBar ul{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+}
+#navBar ul li a{
+        text-decoration: none;
+}
+#navBar ul li a p{
+        color: var(--navText);
+        padding: 36px 110px 36px 110px;
+        box-sizing: border-box;
+        margin: 0;
+}
+#navBar ul li a p:hover{
+        background: radial-gradient(var(--orange), var(--red));
+}
+#profileImg{
+        width: 50px;
+        height: 50px;
+        z-index: 3;
+        cursor: pointer;
+	border-radius: 50%;
+}
+#greetings{
+        position: absolute;
+        top: 11%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 35px;
+        font-style: oblique;
+}
+
+
+/* Dropdown Menu for Profile */
+#profileDropdown{
+        width: 160px;
+        height: 10%;
+        position: absolute;
+        top: 10%;
+        right: 1.2%;
+        transition: height 1s ease-in-out;
+	z-index: -1;
+}
+#profileDropdown ul{
+        position: absolute;
+        top: 0%;
+        height: 100%;
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: var(--orange);
+        margin: 0;
+        padding: 0;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+#profileDropdown ul li{
+        padding: 6.5px 0 6.5px 0;
+}
+#profileDropdown ul li a{
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+	z-index: 1;
+}
+#profileDropdown ul li a:hover{
+        text-decoration: underline;
+}
+
+@media screen and (max-width: 400px){
+	#navBar ul li a p{
+		padding: 25px 5px 25px 5px;
+		font-size: 12px;
+	}
+	#profileImg{
+		transform: scale(70%);
+	}
+
+	#greetings{
+		transform: scale(50%);
+		left: 20%;
+	}
+}
+
+@font-face{
+	font-family: Experimental;
+	font-weight: bold,
+	src: url(fonts/fonts/experimental.ttf);
+}
