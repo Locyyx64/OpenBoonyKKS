@@ -1,9 +1,10 @@
 @import url("mutual.css");
 @charset "UTF-8";
 
-:root{
-	--lightRed: rgba(196, 21, 24, 0.7);
-	--shadow: rgba(94, 60, 60, 0.8);
+body{
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: var(--whiteish);
 }
 
 #timeDiv{
@@ -11,44 +12,48 @@
 	top: 15%;
 	right: 0%;
 	opacity: 0;
-	width: 40vh;
-	height: 40vh;
+	width: 20vw;
+	height: 35vh;
 	box-shadow: 10px 10px 15px var(--shadow);
 	border-radius: 15px;
-	background: linear-gradient(to right bottom, var(--orange), var(--red));
+	background-color: var(--lighterBlue);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	z-index: -2;
+	z-index: -3;
 }
 .time{
+	font-family: "FuturaBook";
 	font-size: 30px;
-	font-style: oblique;
 	margin: 5px 0 0 0;
 	padding: 0;
+	color: var(--whiteish);
 }
 
 /* Styling the Crypto Tracker */
 #cryptos{
-	background: linear-gradient(to right bottom, var(--orange), var(--red));
-	width: 60vh;
-	height: 30vh;
+        background-color: var(--lighterBlue);
+	width: 20vw;
+	height: 35vh;
 	position: absolute;
-	top: 60%;
-	right: 5%;
+	top: 55%;
+	right: 3%;
 	border-radius: 15px;
 	box-shadow: 10px 10px 15px var(--shadow);
 	
 }
+#price{
+	color: var(--whiteish);
+}
 #cryptos input{
 	position: relative;
 	top: 10%;
-	left: 17%;
-	transform: scale(150%);
-	width: 12vw;
+	left: 12%;
+	transform: scale(125%);
+	width: 13vw;
 	border-radius: 10px;
-	font-style: italic;
+	font-family: "ProximaBold";
 }
 #cryptos input:focus{
 	outline: 5px double var(--red);
@@ -56,7 +61,6 @@
 #cryptos ul{
 	position: relative;
 	top: 15%;
-	left: 7%;
 	width: 23vw;
 	height: 20vh;
 	overflow: auto;
@@ -64,12 +68,17 @@
 }
 #cryptos ul li{
 	width: inherit;
+	font-family: "FuturaBook";
 }
 #cryptos ul li a{
+	color: var(--darkestBlue);
+	padding: 1px;
 	text-decoration: none;
 }
+#cryptos ul li a:hover{
+	color: var(--whiteish);
+}
 .crypto{
-	font-style: oblique;
 	font-size: 20px;
 }
 .exit-img{
@@ -83,12 +92,16 @@
 #best_achiever{
 	position: absolute;
 	top: 12%;
-	left: 3%;
-	width: 50vh;
+	left: 1%;
+	width: 25vw;
 	height: 30vh;
 	border-radius: 15px;
-	background: linear-gradient(to right bottom, var(--orange), var(--red));
+	background: var(--lighterBlue);
 	box-shadow: 10px 10px 15px var(--shadow);
+	color: var(--whiteish);
+}
+#best_achiever p:not([id="uname"]) {
+	font-family: "ProximaBold";
 }
 #inner_achiever{
 	display: flex;
@@ -108,10 +121,51 @@
 }
 #uname{
 	font-family: 'PointWarrior', sans-serif;
+	transform: scale(150%);
+}
+#points{
+	transform: scale(110%);
 }
 #highest_title{
-	margin-left: 10px;
+	margin-left: 30px;
 	text-decoration: underline;
+	transform: scale(110%);
+}
+
+/* Styling the Main Section */
+main{
+	/*background-color: var(--darkBlue); */
+	background: linear-gradient(to bottom, var(--darkBlue), var(--lighterBlue));
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 100vh;
+	width: 45vw;
+	z-index: -3;
+}
+#title{
+	width: 10vw;
+	height: 10vh;
+	position: relative;
+	left: 2%;
+}
+#title hr{
+	z-index: 3;
+	width: 0;
+	height: 2px;
+	background-color: var(--whiteish);
+	transition: width 0.5s cubic-bezier(0.91, 0.63, 0.35, 0.82);
+}
+#title h2{
+	position: relative;
+	top: 20%;
+	color: var(--white);
+	font-family: "ProximaBold";
+	z-index: 3;
+}
+#title:hover hr{
+	width: 10vw;
 }
 
 
@@ -130,5 +184,4 @@
 @font-face{
 	font-family: PointWarrior;
 	src: url("../fonts/fonts/victorregular.ttf");
-	font-size: 1.5rem;
 }

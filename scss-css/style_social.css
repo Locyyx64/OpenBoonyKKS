@@ -1,10 +1,10 @@
-@import url("variables.css");
 @import url("style_search.css");
-@charset "UTF-8";
+@import url("mutual.css");
+@import url("style_productlist.css");
 
 body{
-	overflow-x: hidden;
-	overflow-y: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
 }
 
 #products-list {
@@ -13,34 +13,34 @@ body{
         width: 100vw;
         height: 250vh;
         z-index: -2;
-	font-family: "FuturaBook", sans-serif;
+        font-family: "FuturaBook", sans-serif;
 }
-.product:nth-child(even){
+.user:nth-child(even){
         background-color: var(--lighterBlue);
-	color: var(--white);
+        color: var(--white);
 }
 #products-list, #products-list th, #products-list td{
         border: none;
 }
 #products-list thead {
         position: absolute;
-        top: 0%;
+ 	top: 0%;
 }
 #products-list tr {
         display: flex;
         align-items: center;
-        justify-content: space-between; 
+        justify-content: space-between;
 }
 #products-list th, #products-list td{
         box-sizing: border-box;
-	width: 16.6666667vw;
+        width: 25vw;
 }
 #products-list td{
         margin: 20px 0 10px 0;
         text-align: center;
 }
 #products-list th, #products-list th a{
-        color: var(--columnText);
+        color: var(--lighterBlue);
 }
 #products-list th:hover{
         text-decoration: underline;
@@ -53,26 +53,9 @@ body{
         height: 80px;
 }
 
-/* Pagination */
-#pagination{
-	width: 100vw !important;
-}
-#page-nav ul{
-	position: relative;
+#searchProduct{
+	position: absolute;
 	left: 50%;
-	transform: translateX(-50%);
-	list-style-type: none;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(150%);
 }
-#page-nav ul li{
-	margin: 0 30px 0 30px;
-}
-#page-nav ul li a{
-        text-decoration: none;
-        color: var(--pageText);
-}
-#page-selected{
-        display: inline-block;
-        transform: scale(170%);
-	box-sizing: border-box;
-}
-

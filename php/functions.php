@@ -26,7 +26,7 @@
 			$product_price = $row["ProductPrice"];
 			$product_publisher = $row["ProductSource"];
 
-			$table_row = "<tr> \n";
+			$table_row = "<tr class=product> \n";
 			$table_row .= "<td><a href='products.php?prod_id={$product_id}'><img class=product-images src='../images/$product_picture' alt='Image not found :('></a></td> \n";
 			$table_row .= "<td>{$product_name}</td> \n";
 			$table_row .= "<td>{$product_price}</td> \n";
@@ -37,6 +37,31 @@
 
 			echo $table_row;
 		}	
+	}
+	function getUsersBy(string $limit, string $sort, string $sqlcondition, string $sort_type="ASC"){
+		global $connection;
+
+		$get_users = "SELECT * FROM Users ";
+		$get_users .= "WHERE {$sqlcondition} ";
+		$get_users .= "ORDER BY $sort $sort_type ";
+		$get_users .= $limit;
+		$get_users_query = mysqli_query($connection, $get_users);
+
+		while($row = mysqli_fetch_assoc($get_users_query)){
+			$ppic = $row["ProfilePicture"];
+			$uname = $row["Username"];
+			$nick = $row["UserNickname"];
+			$upoints = $row["PointCount"];
+
+			$msg = "<tr class=user>\n";
+			$msg .= "<td><img class='product-images' src='../{$ppic}' title='Profile Picture of {$uname}'></td> \n";
+			$msg .= "<td>{$uname}</td> \n";
+			$msg .= "<td>{$nick}</td> \n";
+			$msg .= "<td>{$upoints}</td> \n";
+			$msg .= "</tr>";
+
+			echo $msg;
+		}
 	}
 
 	function getLimit(int $products_per_page, int $page){
@@ -49,12 +74,23 @@
 		}
 	}
 
-	function getNumOfProds(string $sqlcondition){
+	function getNumOfTable(string $sqltable, string $sqlcondition){
 		global $connection;
-		$get_all_prod = "SELECT * FROM Products ";
+		$get_all_prod = "SELECT * FROM {$sqltable} ";
                 $get_all_prod .= "WHERE {$sqlcondition}";
                 $get_all_query = mysqli_query($connection, $get_all_prod);
                 return mysqli_num_rows($get_all_query);
+	}
+
+	function getAllNames(){
+		global $connection;
+		$get_all_prods = "SELECT * FROM Products";
+		$get_all_prods_query = mysqli_query($connection, $get_all_prods);
+		$names = [];
+		while($row = mysqli_fetch_assoc($get_all_prods_query)){
+			$names["{$row["ProductName"]}"] = $row["ProductID"];
+		}
+		return $names;
 	}
 
 	function getPage() : int{
@@ -65,11 +101,11 @@
 		}
 	}
 
-	function getSort() : string{
+	function getSort(string $custom_sort="ProductName") : string{
 		if(isset($_GET["sort"])){
 			return $_GET["sort"];
 		} else{
-			return "ProductName";
+			return $custom_sort;
 		}
 	}
 

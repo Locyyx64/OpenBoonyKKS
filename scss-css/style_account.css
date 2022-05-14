@@ -6,6 +6,7 @@
 	left: 10%;
 	border: 3px solid black;
 	padding: 10px;
+	font-family: "FuturaBook"; 
 }
 #settings-form{
 	position: absolute;
@@ -14,10 +15,18 @@
 }
 #settings-form input{
 	margin: 50px 0 50px 0;
+	font-family: "ProximaBold";
+	color: var(--darkestBlue);
 }
 textarea{
 	vertical-align: middle;
 }
 label{
-	color: rgb(239, 4, 4);
+	color: var(--darkBlue);
+	font-family: "FuturaBook";
+}
+#settings-form input[type="submit"]{
+	margin-left: 15px;
+	transform: scale(150%);
+	cursor: pointer;
 }

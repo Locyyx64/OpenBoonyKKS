@@ -15,6 +15,7 @@
 		while($row = mysqli_fetch_assoc($select_user_query)){
 			$user_role = $row["UserRole"];
 			$profile_pic = "../{$row["ProfilePicture"]}";
+			$current_cart = $row["CurrentCart"];
 		}
 
 	} else {
@@ -27,6 +28,7 @@
 		<li><a href="products.php" ><p>Products</p></a></li>
 		<li><a href="about.php" ><p>About</p></a></li>
 		<li><a href="services.php" ><p>Services</p></a></li>
+		<li><a href="social.php"><p>Social</p></a></li>
 		<?php
 			if($user_role === "admin"){
 				echo "<li><a href='admin.php'><p>Admin</p></a></li>";
@@ -40,6 +42,17 @@
 	<ul>
 		<li><a href="account_settings.php">Account Settings</a></li>
 		<li><a href="purchases.php">Ongoing Purchases</a></li>
+		
+		<?php 
+			if($current_cart === NULL){
+				echo '<li><a href="cart.php">View Cart</a></li>';
+			} else{
+				$products = explode(" ", $current_cart);
+				$length = count($products) - 1;
+				echo "<li><a href='cart.php'>View Cart <sup><span id='numOfProds'>{$length}</span></sup></a></li>";
+			}
+		?>
+		
 		<li><a href="points.php">Points</a></li>
 		<li><a href="friends.php">Friends</a></li>
 		<li><a href="main.php?logout=true">Log Out</a></li>

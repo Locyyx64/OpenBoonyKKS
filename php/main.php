@@ -12,12 +12,17 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
 	<script src="../engine/jquery-3.6.0.min.js"></script> 
        	<title>OpenBoonyKKS</title>
-
+</head>
 <body>
 	<?php include "mutual.php" ?>
 
-	<?php echo "<p id='greetings'>Welcome, ".$username."!"; ?>	
-
+	<?php echo "<p id='greetings'>Welcome, ".$username."!"; ?>
+	<main>	
+		<div id="title">
+			<h2>Technology News</h2>
+			<hr>
+		</div>
+	</main>
 	<!--Time Displayer-->
 	<div id="timeDiv">
 		<p class="time" id="date" ></p>
@@ -64,7 +69,7 @@
 
 	<script>
 		$(document).ready(function() {
-			$("#timeDiv").delay(500).animate({opacity: "1", right: "5%"});
+			$("#timeDiv").delay(500).animate({opacity: "1", right: "3%"});
 		});
 	</script>
 	<script src="../javascript/crypto.js"></script>

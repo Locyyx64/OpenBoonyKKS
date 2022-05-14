@@ -3,7 +3,7 @@ const dropdown = document.querySelector("#profileDropdown");
 
 async function openPage(on){
 	if (on === "on"){
-		await Promise.all([change("#profileDropdown ul", "opacity", "1", 50), change("#profileDropdown", "height", "20%", 50)]);
+		await Promise.all([change("#profileDropdown ul", "opacity", "1", 50), change("#profileDropdown", "height", "26%", 50)]);
 	} else if (on === "off"){
 		await Promise.all([change("#profileDropdown ul", "opacity", "0", 50), change("#profileDropdown", "height", "0%", 50)]);
 	}

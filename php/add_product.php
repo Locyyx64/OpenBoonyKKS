@@ -55,7 +55,7 @@
 
 
 		$add_prod = "INSERT INTO Products ";
-		$add_prod .= "VALUES(NULL, '$product_name', $product_date, '$product_author', NULL, $product_price, '$product_picture', '$product_description')";
+		$add_prod .= "VALUES(NULL, '$product_name', $product_date, '$product_author', NULL, NULL, $product_price, '$product_picture', '$product_description')";
 		$add_prod_query = mysqli_query($connection, $add_prod);
 		if(!$add_prod_query){
 			die("Failed to add a new product: ".mysqli_errno($connection));

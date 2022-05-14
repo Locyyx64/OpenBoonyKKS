@@ -17,7 +17,7 @@ const getCryptos = () => {
 			exitEl.src = exitImg;
 			exitEl.id = `exit-img${idx-1}`;
 			exitEl.classList.add("exit-img");
-			cryptoEl.innerHTML = `${data.symbol.toUpperCase()} = $${data.tickers[0].last} (<a href= 'https://www.coingecko.com/en/coins/${data.id}'>${data.name}</a>)`;
+			cryptoEl.innerHTML = `${data.symbol.toUpperCase()} = <span id="price">$${data.tickers[0].last}</span> (<a href= 'https://www.coingecko.com/en/coins/${data.id}'>${data.name}</a>)`;
 			cryptoEl.classList.add("crypto");
 			cryptoEl.id = `crypto${idx+1}`;
 
@@ -57,7 +57,7 @@ userInput.addEventListener("keypress", e => {
 				const exitEl = document.createElement("img");
 				exitEl.src = exitImg;
 				exitEl.classList.add("exit-img");
-				cryptoEl.innerHTML = `${data.symbol.toUpperCase()} = $${data.tickers[0].last} (<a href= 'https://www.coingecko.com/en/coins/${data.id}'>${data.name}</a>)`;
+				cryptoEl.innerHTML = `${data.symbol.toUpperCase()} = <span id='price'>$${data.tickers[0].last}</span> (<a href= 'https://www.coingecko.com/en/coins/${data.id}'>${data.name}</a>)`;
 				cryptoEl.classList.add("crypto");
 				currCryptos.push(data.id);
 

@@ -4,20 +4,22 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 85%;
   height: 70%;
   border-radius: 20px;
-  background: linear-gradient(to left bottom, rgba(249, 105, 69, 0.6), rgba(249, 105, 69, 0));
+  background: linear-gradient(to left bottom, var(--darkBlue), var(--whiteish));
 }
 
 #intro {
   float: left;
   height: 100%;
-  width: 50%;
+  width: 55%;
+  padding-right: 20px;
 }
 
 #descriptionText {
   font-size: 1.2em;
+  color: var(--whiteish);
+  font-family: "FuturaBook" !important; 
 }
 
-/*# sourceMappingURL=about.css.map */

@@ -15,6 +15,13 @@
 <body>
 	<?php include "mutual.php" ?>
 
+	<?php 
+		if($user_role != "admin"){
+			header("Location: main.php");
+		}	
+	?>
+
+
 	<!--Admin Site List-->
 	<div id="navbar-admin">
 		<ul>

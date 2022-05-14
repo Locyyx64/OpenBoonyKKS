@@ -19,7 +19,7 @@
 
 	<main>
 		<video id="intro" controls>
-			<source src="" type="video/mp4">
+			<source src="../images/intro.mp4" type="video/mp4">
 		</video>
 		<div id="descriptionText">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium nibh ipsum consequat nisl. Dictum non consectetur a erat nam at lectus. Pulvinar mattis nunc sed blandit libero. Vestibulum morbi blandit cursus risus at ultrices mi tempus. Pulvinar etiam non quam lacus suspendisse. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Et malesuada fames ac turpis egestas. Tincidunt augue interdum velit euismod. Non odio euismod lacinia at quis risus sed. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus. Suspendisse sed nisi lacus sed viverra tellus in. Porta nibh venenatis cras sed felis. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum. Sed faucibus turpis in eu mi bibendum. Mauris vitae ultricies leo integer malesuada nunc. Id velit ut tortor pretium viverra. Id donec ultrices tincidunt arcu non sodales. Morbi tristique senectus et netus. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet.</p>

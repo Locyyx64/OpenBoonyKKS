@@ -1,0 +1,53 @@
+
+/* Styling the Search Input */
+#searchProduct{
+        display: inline-grid;
+        grid-template-columns: auto auto;
+        position: absolute;
+        left: 10%;
+        top: 13%;
+}
+#searchInput{
+        box-shadow: 3px 3px 5px var(--shadow);
+	font-family: "ProximaBold", serif;
+}
+#searchInput::placeholder{
+        font-style: italic;
+}
+#searchInput:focus{
+        outline: 1px double var(--brightRed);
+}
+#searchImg{
+        width: 15px;
+        height: 15px;
+        margin: 5px 10px 0 0;
+}
+#searchDropdown{
+        position: absolute;
+        left: 11.35%;
+        top: 16%;
+        background: linear-gradient(to right bottom, var(--lighterBlue), var(--whiteish));
+        /* border-radius: top-left top-right bottom-right bottom-left*/
+        border-radius: 0 0 15px 15px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 9.9%;
+}
+#searchDropdown li{
+        text-align: center;
+        transform: scale(120%);
+}
+#searchDropdown li a{
+        color: black;
+ 	text-decoration: none;
+ 	display: inline-block;
+	font-family: "FuturaBook", sans-serif;
+}
+#searchDropdown li a:hover{
+	text-decoration: underline;
+	text-decoration-thickness: 1.35px;
+}
+#searchProduct{
+        z-index: -3;
+}

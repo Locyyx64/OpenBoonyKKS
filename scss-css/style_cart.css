@@ -1,0 +1,28 @@
+@import url("mutual.css");
+
+main{
+	margin: 200px auto 0;
+}
+#productsShow > h1{
+	margin-left: 50px;
+	margin-bottom: 30px;
+	padding: 5px;
+	border: 1px solid black;
+	display: inline-block;
+
+	font-family: "ProximaBold", serif;
+
+	border-width: 1.5px;
+	transition: border-width 0.3s ease-out;
+}
+#productsShow > h1:hover{
+	border-width: 5px;
+}
+
+#products-list{
+	position: static !important;
+}
+#products-list thead{
+	top: auto !important;
+}
+

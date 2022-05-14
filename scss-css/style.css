@@ -1,11 +1,7 @@
-:root {
-        --orange: rgba(224, 84 , 8, 0.6);
-        --red: rgba(196, 21, 24, 0.8);
-	--shadow: rgb(66, 76, 68);
-}
+@import url("mutual.css");
 
 * {
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: "FuturaBook", sans-serif;
 	font-weight: bold;
 }
 
@@ -17,7 +13,7 @@ main {
 }
 
 #userInput {
-        background: linear-gradient(to right bottom, var(--red), var(--orange));
+        background: linear-gradient(to right bottom, var(--lighterBlue), var(--whiteish));
 	height: 60vh;
 	width: 0vw;
 	position: absolute;
@@ -44,9 +40,17 @@ input {
 	border-radius: 7px;
 
 }
-input[type="submit"]{
+#submit-btn{
 	width: 0rem;
 	border-radius: 15px;
+	background-color: var(--darkBlue);
+	color: var(--white);
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+#submit-btn:active{
+	transform: scale(110%);
 }
 #userError{
 	position: absolute;
@@ -58,5 +62,6 @@ input[type="submit"]{
 }
 h3{
 	font-size: 20px;
+	font-family: "ProximaBold", serif;
 }
 

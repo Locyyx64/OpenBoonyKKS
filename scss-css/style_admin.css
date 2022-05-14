@@ -1,12 +1,5 @@
 @import url("mutual.css");
 
-:root {
-	--adminText: #473b3b;
-	--selectedAdmin1: rgba(201, 141, 141, 0.4);
-	--selectedAdmin2: rgba(204, 50, 50, 0.7);
-	--columnText: rgb(226, 24, 13);
-	--pageText: #d30e0e;
-}
 
 #navbar-admin {
 	position: absolute;
@@ -14,7 +7,7 @@
 	left: 0%;
 	height: 100%;
 	width: 30vh;
-	background-color: var(--orange)
+	background-color: var(--darkBlue);
 }
 #navbar-admin ul{
 	list-style-type: none;	
@@ -24,12 +17,13 @@
 	box-sizing: border-box;
 }
 #navbar-admin ul li:hover{
-	background: linear-gradient(to right bottom, var(--selectedAdmin1), var(--selectedAdmin2)); 
+	background: var(--lighterBlue);
 }
 
 #navbar-admin ul li a{
 	text-decoration: none;
-	color: var(--adminText);
+	color: var(--white);
+	font-family: "FuturaBook", sans-serif;
 	font-size: 17px;
 }
 
@@ -48,6 +42,7 @@ thead tr th, tbody tr td{
 	box-sizing: border-box;
 	margin: 25px 50px 10px 50px;
 	text-align: center;
+	font-family: "FuturaBook", sans-serif;
 }
 thead{
 	height: 18%;
@@ -60,9 +55,11 @@ tr {
 	align-items: center;
 	justify-content: center;
 }
+thead, thead tr th a{
+	color: var(--lighterBlue);
+}
 thead tr th a{
 	text-decoration: none;
-	color: var(--columnText); 
 }
 thead tr th a:hover{
 	text-decoration: underline;
@@ -74,11 +71,14 @@ thead tr th a:hover{
 
 /* Styling the "Add Product" Page */
 
+h1, #productCreation{
+	font-family: "FuturaBook", sans-serif;
+}
+
 h1{
 	position: absolute;
 	top: 12%;
 	left: 25%;
-	font-style: oblique;
 	border: 2px solid black;
 	padding: 5px;
 }
@@ -93,6 +93,8 @@ h1{
 #productCreation input, textarea{
 	margin: 35px 10px 35px 10px;
 	font-size: 1.1rem;
+	font-family: "ProximaBold", serif;
+
 }
 #productCreation input:focus, textarea:focus{
 	outline: 3px double var(--columnText);

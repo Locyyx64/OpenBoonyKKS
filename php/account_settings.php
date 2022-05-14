@@ -42,7 +42,7 @@
 			<label for="profile-nick">Nickname: </label>
 			<input type="text" name="profile-nick" id="profile-nick" maxlength=15 value="<?php echo $nickname ?>">
 			<br>
-			<input type="submit" name="submit">
+			<input type="submit" name="submit" value="Change Settings">
 		</form>
 	</div>
 
